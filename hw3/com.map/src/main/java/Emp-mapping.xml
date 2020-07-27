@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.hibernate.com.map.Emp" table="emp">
+<id name="id" column="eid"></id>
+<property name="name" column="ename"></property>
+<map name="phoneno" cascade="all">
+<key column="id"></key>
+<index column="type" type="int"></index>
+<one-to-many class="com.hibernate.com.map.PhoneNumber"/>
+</map>
+</class>
+<class name="com.hibernate.com.map.PhoneNumber" table="phone">
+<id name="pid"></id>
+<property name="network"></property>
+<property name="phonenumber"></property>
+</class>
+</hibernate-mapping>
