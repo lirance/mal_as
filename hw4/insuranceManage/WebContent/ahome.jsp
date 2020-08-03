@@ -45,10 +45,10 @@
                                 <div class="nav-collapse nav-collapse_">
                                     <ul class="nav sf-menu clearfix">
                                         <li class="active"><a href="ahome.jsp">Home</a></li>
-                                        <li><a href="approve.jsp">Recruit Developer</a></li>
-                                        <li><a href="trace.jsp">Trace History</a></li>
+                                        <li><a href="agentlist.jsp">Agent list</a></li>                               
+                                        <li><a href="policyholders.jsp">clients</a></li>                                                                    
+                                        <li><a href="policylist.jsp">policy list</a></li>
                                         <li><a href="index.jsp">Logout</a></li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -66,11 +66,10 @@
         <article class="span4" style="color: white;margin-left: 50px">
             <ol class="list1">
                 <li class="active"><a style="font-size: 20px" href="ahome.jsp">Home</a></li>
-                <li><a style="font-size: 20px" href="approve.jsp">Recruit Developer</a></li>
-                <li><a  style="font-size: 20px" href="trace.jsp">Trace History</a></li>
-                <li><a  style="font-size: 20px" href="history1.jsp">BUG_STATUS</a></li>
-                <li><a style="font-size: 20px" href="index.jsp">Logout</a></li>
-            </ol>
+                <li><a style="font-size: 20px;" href="agentlist.jsp">Agent list</a></li>                               
+                <li><a style="font-size: 20px;" href="policyholders.jsp">clients</a></li>                                                                    
+                <li><a style="font-size: 20px;" href="policylist.jsp">policy list</a></li>
+                <li><a style="font-size: 20px;" href="index.jsp">Logout</a></li>
         </article>
         <article class="span8 about-box" style="">
             <h5 style="color: darkblue;margin-top: -150px;margin-left: 450px">Welcome Manager</h5>

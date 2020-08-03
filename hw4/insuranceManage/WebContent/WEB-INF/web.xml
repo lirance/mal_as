@@ -33,6 +33,10 @@
         <servlet-name>RegisterActionPH</servlet-name>
         <servlet-class>action.RegisterActionPH</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>newPolicyAction</servlet-name>
+        <servlet-class>action.newPolicyAction</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterAction</servlet-name>
         <url-pattern>/RegisterAction</url-pattern>
@@ -40,6 +44,10 @@
     <servlet-mapping>
         <servlet-name>RegisterActionPH</servlet-name>
         <url-pattern>/RegisterActionPH</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>newPolicyAction</servlet-name>
+        <url-pattern>/newPolicyAction</url-pattern>
     </servlet-mapping>
      
     <servlet-mapping>
