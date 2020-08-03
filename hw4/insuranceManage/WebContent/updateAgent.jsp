@@ -128,7 +128,7 @@ label {
 							</div>
 							<div class="form-div-1">
 								<label>Agent Name</label> <input type="text" value="<%=name%>"
-									name="agno">
+									name="name">
 
 							</div>
 
