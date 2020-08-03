@@ -43,7 +43,6 @@ public class dlogin extends HttpServlet {
 
             String name = request.getParameter("name");
             String pass = request.getParameter("pass");
-            String dom = request.getParameter("domain");
             
             HttpSession ses = request.getSession();
             Connection con = Dbcon.getCon();

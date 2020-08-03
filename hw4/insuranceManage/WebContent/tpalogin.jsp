@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>TPA Login</title>
+        <title>Policy Holder Login</title>
         <meta charset="utf-8">
 
         <meta name ="description" content="Your description">
@@ -88,7 +88,7 @@
 
                     <article class="span8 form-box" style="margin-left: 500px;margin-top: 60px">
                         <div>
-                            <br><h5 style="color: white;margin-left: -10px">TEAM LEAD Login</h5>
+                            <br><h5 style="color: white;margin-left: -10px">Policy holder Login</h5>
                             <form name="tp" action="tpalog" method="post" onsubmit="return tplog()">
                                 <fieldset>
                                     <div class="form-div-1">

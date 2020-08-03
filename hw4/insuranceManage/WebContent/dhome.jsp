@@ -43,9 +43,9 @@
                             <div class="clearfix">
                                 <div class="nav-collapse nav-collapse_">
                                     <ul class="nav sf-menu clearfix">
-                                        <li class="active"><a href="thome.jsp">Home</a></li>
-                                        <li><a href="Bug_Tkt.jsp">Triage Inbox</a></li>
-                                        <li><a href="rectification.jsp">Rectification Bug</a></li>
+                                       <li><a href="dhome.jsp">Home</a></li>
+                                        <li><a href="agentInfo.jsp">Agent info</a></li>                               
+                                        <li><a href="agentph.jsp">My client</a></li>
                                         <li><a href="index.jsp">Logout</a></li>
                                     </ul>
                                 </div>
@@ -69,8 +69,8 @@
             <h5 style="color: darkblue;">Actions</h5>
             <ol class="list1">
                 <li><a style="font-size: 20px" href="dhome.jsp">Home</a></li>
-                <li><a style="font-size: 20px" href="Bug_Tkt.jsp">Triage Inbox</a></li>
-                <li><a style="font-size: 20px" href="rectification.jsp">Rectification Bug</a></li>
+                <li><a style="font-size: 20px" href="agentInfo.jsp">Agent Info</a></li>
+                <li><a style="font-size: 20px" href="agentph.jsp">My client</a></li>
                 <li><a style="font-size: 20px" href="index.jsp">Logout</a></li>
             </ol>
         </article>

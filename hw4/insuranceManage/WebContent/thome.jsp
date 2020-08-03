@@ -44,10 +44,7 @@
                                 <div class="nav-collapse nav-collapse_">
                                     <ul class="nav sf-menu clearfix">
                                         <li class="active"><a href="thome.jsp">Home</a></li>
-                                        <li><a href="affix.jsp">Affix New Bug</a></li>
-<!--                                        <li><a href="feature1.jsp">Analyse Bug Report</a></li>-->
-                                        <li><a href="feature1.jsp">Data Reduction FS</a></li>
-                                        <li><a href="rectivied.jsp">Rectified bugs</a></li>
+                                        <li><a href="phinfo.jsp">Policy holder info</a></li>
                                         <li><a href="index.jsp">Logout</a></li>
                                     </ul>
                                 </div>
@@ -66,16 +63,14 @@
         <article class="span4" style="color: white">
             <h5 style="color: darkblue;">Actions</h5>
             <ol class="list1">
-                <li><a style="font-size: 20px;" href="thome.jsp">Home</a></li>
-                <li><a  style="font-size: 20px;" href="affix.jsp">Affix New Bug</a></li>
-<!--                <li><a href="buganalyse.jsp">Analyse Bug Report</a></li>-->
-                <li><a style="font-size: 20px;" href="feature1.jsp">Data Reduction FS</a></li>
-                <li><a style="font-size: 20px;" href="rectivied.jsp">Rectified bugs</a></li>
+        		<li><a style="font-size: 20px;" href="thome.jsp">Home</a></li>
+                <li><a  style="font-size: 20px;" href="phinfo.jsp">Policy holder info</a></li>
                 <li><a style="font-size: 20px;" href="index.jsp">Logout</a></li>
+            </ol>
             </ol>
         </article>
         <article class="span8 about-box" style="">
-            <h5 style="color: darkblue;margin-top: 180px;margin-left: -60px">Welcome to TL Home</h5>
+            <h5 style="color: darkblue;margin-top: 180px;margin-left: -60px">Welcome to Policy Holder Home</h5>
             
           
                 

@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        <title>Dev Login</title>
+        <title>Agent Login</title>
         <meta charset="utf-8">
 
         <meta name ="description" content="Your description">
@@ -91,12 +91,12 @@
             </header>
             <!--content-->
 
-            <div class="container" style="background-image: url('img/devlog1.jpg');height: 450px">
+            <div class="container" style="background-color:#DAF7A6 ;height: 450px">
                 <div class="row">
 
                     <article class="span8 form-box" style="margin-left: 750px;margin-top: -12px">
                         <div>
-                            <br><h5 style="color: white">Developer Login</h5>
+                            <br><h5 style="color: black">Agent Login</h5>
                             <form  name="de" action="dlogin" method="post" onsubmit="return dev()">
                                 <fieldset>
                                     <div class="form-div-1">
@@ -109,14 +109,7 @@
                                         <input type="password" placeholder="password:" name="pass" value="">
                                             <br>
                                     </div>
-                                    <div class="form-div-3">
-                                        <select name="domain" style="margin-top: 0px;">
-                                            <option value="">Developers Domain</option>
-                                            <option value="Java and J2EE">Java and J2EE</option>
-                                            <option value="Dot net">Dot net</option>
-                                            <option value="Android">Android</option>
-                                        </select><br>
-                                    </div>
+                                 
                                     
                                 </fieldset>
                                 <input type="submit" value="" class="btn btn-primary btn2" style="margin-left: 73px;width: 90px;background-image: url('img/sub.png')"/>
