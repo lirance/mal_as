@@ -1,15 +1,13 @@
-<%@page import="action.Dbcon"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@page session="true"%>
+<%@page import="action.Dbcon"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.ResultSet"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-<title>Agent lists</title>
+<title>Update Agent Info</title>
 <meta charset="utf-8">
-
 <meta name="description" content="Your description">
 <meta name="keywords" content="Your keywords">
 <meta name="author" content="Your name">
@@ -35,6 +33,7 @@
 		$('.thumb-pad5 figure a').touchTouch();
 	});
 </script>
+
 </head>
 <body>
 	<div class="global">
@@ -72,11 +71,13 @@
 		</header>
 		<!--content-->
 		<div class="container padBot"
-			style="height: 800px; background-image: url('img/bgall2.jpg')">
-			<br> <br>
-			<div class="row">
-				<article class="span4" style="color: white">
-					<h5 style="color: white;">Actions</h5>
+			style="height: 1000px; background-image: url('img/bgall2.jpg')">
+			<br>
+			<br>
+			<div class="row" style="margin-left: 20px">
+				<article class="span4" style="color: white;">
+					<h5>Actions</h5>
+
 					<ol class="list1">
 						<li><a style="font-size: 20px;" href="ahome.jsp">Home</a></li>
 						<li><a class="active" style="font-size: 20px;"
@@ -87,62 +88,88 @@
 						<li><a style="font-size: 20px;" href="index.jsp">Logout</a></li>
 					</ol>
 				</article>
-				<article class="span8 about-box">
-					<h5 style="color: white; margin-top: 10px; margin-left: -50px">personal
-						Info</h5>
-					<table style="margin-left: -210px; width: 1000px">
-						<tr
-							style="border: solid 1px; font-size: 20px; color: burlywood; font-family: monospace; font-weight: bold;">
-							<td style="text-align: center; height: 40px">UID</td>
-							<td style="text-align: center;">Name</td>
-							<td style="text-align: center;">Bank</td>
-							<td style="text-align: center;">WorkingDetail</td>
-							<td style="text-align: center;">Email</td>
-							<td style="text-align: center;">Address</td>
 
-							<td style="text-align: center;">Agenda</td>
-
-							<td style="text-align: center;">Age</td>
-						</tr>
-						<%
-							String agno, name, bank, detail, email, address, sex, age = null;
-						String sql = "select * from agent";
-						Connection con = Dbcon.getCon();
-						Statement st = con.createStatement();
-						ResultSet rs = st.executeQuery(sql);
-						while (rs.next()) {
-							agno = rs.getString("agno");
-							name = rs.getString("name");
-							bank = rs.getString("bank");
-							detail = rs.getString("detail");
-							email = rs.getString("email");
-							address = rs.getString("address");
-							sex = rs.getString("sex");
-							age = rs.getString("age");
-						%>
-						<tr
-							style="border: solid 1px; font-size: 15px; color: white; font-family: monospace; font-weight: bold;">
-							<td style="height: 20px; text-align: center"><%=agno%>
-								<a
-									href="updateAgent.jsp?<%=agno%>,<%=name%>,<%=bank%>,<%=detail%>,<%=email%>,<%=address%>,<%=sex%>,<%=age%></">edit</a>
-							</td>
-							<td style="text-align: center"><%=name%></td>
-							<td style="text-align: center"><%=bank%></td>
-							<td style="text-align: center"><%=detail%></td>
-							<td style="text-align: center"><%=email%></td>
-							<td style="text-align: center"><%=address%></td>
-							<td style="text-align: center"><%=sex%></td>
-							<td style="text-align: center"><%=age%></td>
-
-
-						</tr>
-						<%
-							}
-						%>
-					</table>
+				<style>
+label {
+	font-family: monospace;
+	color: white;
+	font-weight: 25px;
+}
+</style>
 
 
 
+				<%
+					String query = request.getQueryString();
+				String new1 = query.replace("%20", " ");
+				new1 = new1.replace("%3C/","");
+				String am = null;
+				String ar[] = new1.split(",");
+				String agno = ar[0];
+
+				String name = ar[1];
+				String bank = ar[2];
+				String detail = ar[3];
+				String email = ar[4];
+				String address = ar[5];
+				String sex = ar[6];
+				String age = ar[7];
+				%>
+
+				<article class="span8 about-box"
+					style="margin-left: 450px; margin-top: -200px">
+					<h5 style="margin-left: -25px">Agent Info Update</h5>
+
+					<form action="updatestatus" method="post">
+						<fieldset>
+							<div class="form-div-1">
+								<label>Agent Id</label> <input type="text" value="<%=agno%>"
+									name="agno">
+							</div>
+							<div class="form-div-1">
+								<label>Agent Name</label> <input type="text" value="<%=name%>"
+									name="agno">
+
+							</div>
+
+							<div class="form-div-1">
+								<label>Bank</label> <input type="text" value="<%=bank%>"
+									name="bank">
+
+							</div>
+							<div class="form-div-2">
+								<label>Working Detail</label> <input type="text"
+									value="<%=detail%>" name="detail">
+
+							</div>
+							<div class="form-div-2">
+								<label>Email</label> <input type="email" value="<%=email%>"
+									name="email">
+
+							</div>
+
+							<div class="form-div-2">
+								<label>address</label> <input type="text" value="<%=address%>"
+									name="address">
+							</div>
+
+
+							<div class="form-div-2">
+								<label>Agenda</label> <input type="text" value="<%=sex%>"
+									name="sex">
+
+
+							</div>
+							<div class="form-div-2">
+								<label>Age</label> <input type="text" value="<%=age%>"
+									name="age">
+
+							</div>
+
+						</fieldset>
+						<input type="submit" value="" class="btn btn-primary btn2"
+							style="margin-left: 73px; width: 95px; background-image: url('img/sub.png')" />
+					</form>
 				</article>
 			</div>
 		</div>
@@ -158,17 +185,16 @@
 				<article class="span12">
 					<div class="row">
 						<nav class="span6">
-							<!--                        <ul>
-                            <li><a href="thome.jsp">Home</a></li>
-                            <li><a href="affix.jsp">Affix New Bug</a></li>
-                            <li><a href="buganalyse.jsp">Analyse Bug Report</a></li>
-                            <li><a href="feature1.jsp">Data Reduction FS</a></li>
-                            <li class="active"><a href="ired.jsp">Data Reduction IS</a></li>
-                            <li><a href="index.jsp">Logout</a></li>
-                        </ul>-->
+							<!--                                <ul>
+                                    <li><a href="index.html">home</a></li>
+                                    <li class="active"><a href="about.html">about us</a></li>
+                                    <li><a href="products.html">products</a></li>
+                                    <li><a href="services.html">services</a></li>
+                                    <li><a href="contact.html">contacts</a></li>
+                                </ul>-->
 						</nav>
 						<div class="span3 offset3">
-							<!--                        <p>Company Name Here & copy; 2014 &bull; </p>-->
+							<!--                                <p>Company Name Here &copy; 2014 &bull; </p>-->
 						</div>
 					</div>
 				</article>
